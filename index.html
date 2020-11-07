@@ -91,9 +91,21 @@
 				scene.background = new THREE.Color( 0xffffff );
 				scene.fog = new THREE.Fog( 0xffffff, 0, 750 );
 
+				// Light
 				const light = new THREE.HemisphereLight( 0xeeeeff, 0x777788, 0.75 );
 				light.position.set( 0.5, 1, 0.75 );
 				scene.add( light );
+				const pointLight1 = new THREE.PointLight( 0xffffff, 1, 20 );
+				pointLight1.position.set( 3, 4, -3 ); 
+				scene.add( pointLight1 );
+
+				const pointLight2 = new THREE.PointLight( 0xffffff, 1, 20 );
+				pointLight2.position.set( 12, 4, -3 );
+				scene.add( pointLight2 );
+
+				const pointLight3 = new THREE.PointLight( 0xffffff, 1, 20 );
+				pointLight3.position.set( 21, 4, -3 );
+				scene.add( pointLight3 );
 
 				controls = new THREE.PointerLockControls( camera, document.body );
 
